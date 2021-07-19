@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  height: 150%;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+}
+button {
+  background-color: #f19e38;
+}
+
+.channels {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #fff;
+  box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 16px;
+}
+
+.header .profile {
+  margin-right: 24px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  width: 100%; /* previously 680px */
+  max-width: 250px;
+  height: 540px;
+  background: white;
+  border-radius: 6px; /* previously 16px */
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.15); /* previously 0 2px 16px rgba(0, 0, 0, 0.1) */
+  margin-top: 48px; /* new CSS property */
+  z-index: 200;
+  position: relative;
+  opacity: 0.8;
+  /* background-color: pink; */
+  border: 1px solid red; 
+}
+
+.messages {
+  flex: 4;
+  position: relative;
+}
+
+.messages-scroller {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  overflow-y: scroll;
+}
+
+.message {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 8px 12px;
+  max-width: 240px;
+  background: #f1f0f0;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.message.me {
+  align-self: flex-end;
+  background: #f19e38;
+  color: white;
+}
+
+.chat-bar {
+  height: 64px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-bar form {
+  height: 100%;
+  padding: 16px;
+}
+
+.chat-bar form input {
+  width: 100%;
+  height: 32px;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  outline: none;
+}
+
+.chat-bar form input:focus {
+  border: 1px solid #f19e38;
+}
+
+.emoj-container {
+}
+.smiley {
+}
+
+.emoji-div {
+  position: absolute;
+  /* left: 15%; */
+  z-index: 5;
+}
+.emoji {
+}
+
+.s3Image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 4px solid black;
+  padding: 10px;
+  background-color: #d3d3d3;
+  /* background-color:	#D3D3D3; */
+  border-radius: 5px;
+}
+
+.s3Image {
+  height: 70px;
+  width: 70px;
+}
+.s3Image-header {
+  height: 50px;
+  width: 50px;
+}
+.s3Image-header-bg {
+  /* position: absolute; */
+  /* top: 2vh; */
+  /* left: -81vw; */
+  height: 100vh;
+  position: relative;
+  transform: translate(-85vw, 1.5vh);
+  width: 100vw;
+  opacity: 0.1;
+  margin: auto;
+  z-index: -0;
+}
+
+.name-avatar-container {
+  /* border: 2px solid lawngreen;  */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.avatar-in-chat {
+  height: 35px;
+  width: 35px;
+  /* border: 2px solid red;  */
+}
+
+.s3 {
+  position: absolute;
+  top: 40px;
+}
+
+.avatar-button {
+  position: absolute;
+  top: -20px;
+  /* left: -120px; */
+  z-index: 22;
+}
+
+.avatar-container {
+  left: 10px;
+  position: absolute;
+  display: flex;
+  top: 40px;
+  z-index: 100;
+}
+
+.chatroom-app {
+  margin-top: 100px;
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 6px;
+  margin-right: 55px;
+}
+
+.chatroom-form {
+  margin: auto;
+  position: relative;
+  opacity: 0.8;
+  font-weight: bold;
+}
+.chatroom-form input {
+  font-size: 1.2rem;
+  margin: auto;
+  position: relative;
+  opacity: 0.8;
+  font-weight: bold;
+  border: 2px solid black;
+  height: 50px;
+  width: 250px;
+  padding: 10px;
+}
+
+.chatroom-form form {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.chatroom-form button {
+  font-size: 1.2rem;
+  /* margin: auto; */
+  position: relative;
+  opacity: 0.8;
+  font-weight: bold;
+  border: 2px solid black;
+  height: 50px;
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  /* margin-top: 5px; */
+  
+}
